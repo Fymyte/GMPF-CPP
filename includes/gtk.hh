@@ -1,5 +1,9 @@
 #pragma once
 
+#include <gtkmm.h>
+#include <optional>
+#include <string>
+
 namespace GMPF {
-    int start();
-}
+  std::optional<Gtk::Window*> start();
+}  // namespace GMPF

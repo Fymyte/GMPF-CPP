@@ -1,14 +1,15 @@
-#include <gtk/gtk.h>
-#include <err.h>
-
-#include "gtk.hh"
+#include <callback/callbacks.hh>
+#include <data/global_data.hh>
+#include <gtk.hh>
+#include <gtkmm.h>
 
 int main(int argc, char* argv[]) {
 
-    /* Init the Gtk library. */
-    gtk_init(&argc, &argv);
+  Glib::RefPtr<Gtk::Application> app = Gtk::Application::create(argc, argv, "com.gmpf.fr");
+  GMPF::GlobalData::setApp(app);
 
-    int error = GMPF::start();
+  std::optional<Gtk::Window*> window = GMPF::start();
 
-    return error;
+  if (window.has_value()) return app->run(*(window.value()));
+  return 1;
 }

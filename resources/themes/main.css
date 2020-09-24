@@ -1,0 +1,426 @@
+/*@define-color gmpf_pink rgb(255, 0, 90);*/
+
+@define-color ui_text_color rgb(0, 255, 165);
+@define-color ui_text_color_neutral rgb(255, 255, 255);
+@define-color ui_text_color_inv rgb(0, 0, 0);
+
+@define-color ui_button_color rgb(150, 150, 150);
+@define-color ui_button_hover_color rgb(0, 255, 165);
+@define-color ui_button_pressed_color rgb(0, 200, 100);
+@define-color ui_button_selected_color rgb(165, 165, 165);
+
+@define-color ui_shadow_color rgba(0, 0, 0, 0.19);
+
+@define-color ui_box_border_color rgb(0, 255, 165);
+
+@define-color ui_window_background rgb(110, 110, 110);
+@define-color ui_window_background_soft rgb(130, 130, 130);
+@define-color ui_menu_background_color rgb(130, 130, 130);
+
+
+/*Window*/
+widow, window > grid, menubar {
+    background-color: @ui_window_background;
+}
+
+window > *:selected {
+    background-color: black;
+    /* border:none; */
+}
+
+window > label {
+    color: @ui_text_color_netral;
+    /* background: none; */
+}
+
+menu {
+    border-radius: 10px;
+    background-color: @ui_menu_background_color;
+    box-shadow: none;
+    padding: 5px;
+}
+
+
+menuitem:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+menuitem:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+menuitem:hover {
+    box-shadow: none;
+    background-image: none;
+    background-color: @ui_button_hover_color;
+    border-width: 0px;
+    border-style: hidden;
+}
+
+menubar > menuitem:hover {
+    border-radius: 20px;
+}
+
+
+/* spinbutton */
+spinbutton {
+    border-width: 0px;
+    border-style: hidden;
+    border-radius: 20px;
+    /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19); */
+    border-color: @ui_button_pressed_color;
+    background-image: none;
+    background: none;
+    color: @ui_text_color;
+}
+
+spinbutton > button {
+    border-color: @ui_button_color;
+    box-shadow: none;
+    border-radius: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+spinbutton > entry {
+    border-radius: 20px 0px 0px 20px;
+}
+
+
+spinbutton :last-child {
+    border-radius: 0px 20px 20px 0px;
+}
+
+
+/* BUTTON */
+button {
+    border-radius: 20px;
+    color: @ui_text_color_neutral;
+    border-color: @ui_button_color;
+    box-shadow: none;
+    /* border: hidden; */
+    background-image: none;
+    background-color: @ui_button_color;
+}
+
+/* button > * {
+    color: @ui_text_color_netral;
+    border-color: @ui_button_color;
+    box-shadow: none;
+    background-color: @ui_button_color;
+} */
+
+.colorbutton {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+button:hover {
+    border-color: @ui_button_hover_color;
+    background-image: none;
+    background-color: @ui_button_hover_color;
+}
+
+button:active {
+    border-color: @ui_button_pressed_color;
+    background-image: none;
+    background-color: @ui_button_pressed_color;
+}
+
+toolbar.VerticalToolBar button, #LoadImageChooser > button {
+    border-radius: 20px;
+    margin: 5px;
+    /*border-style: hidden;*/
+}
+
+toolbar separator {
+    margin-top: 5px;
+}
+
+.HorizontalToolBar {
+    margin-right: 4px;
+    margin-left: 4px;
+    padding: 0px;
+    background: none;
+    margin-bottom: 2px;
+}
+
+.HorizontalToolBar button {
+    /* margin: 4px; */
+    border-radius: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    box-shadow: none;
+}
+
+.HorizontalToolBar :first-child button {
+    border-radius: 20px 0px 0px 20px;
+}
+
+.HorizontalToolBar :last-child button {
+    border-radius: 0px 20px 20px 0px;
+}
+
+.layer {
+    box-shadow: 0px 0px;
+    border-width: 0px;
+    /* border-left-width: 2px; */
+    border-color: @ui_button_hover_color;
+}
+
+#flow *:selected {
+    margin-top: 5px;
+    background-color: @ui_button_selected_color;
+}
+
+window button label {
+    color: @ui_text_color_neutral;
+}
+
+/* MENUITEM, TOOLBAR */
+menuitem, toolbar {
+    background-color: @ui_window_background;
+}
+
+menuitem:hover {
+    color: @ui_text_color_inv;
+}
+
+menuitem {
+    color: @ui_text_color;
+}
+
+#main_toolbar > * {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* DRAW SPACE */
+#event {
+    background-image: url("../images/grille.png");
+}
+
+.image {
+    padding: 5px;
+    border-radius: 5px;
+    /* background-color: @ui_window_background; */
+    /* box-shadow: 0 2px 4px 0 @ui_shadow_color, 0 3px 10px 0 @ui_shadow_color; */
+}
+
+/* COMBOBOX & ENTRY */
+
+combobox {
+    border-radius: 20px;
+    border-width: 0px;
+    border-color: @ui_button_pressed_color;
+}
+
+entry {
+    border-radius: 20px;
+    border-width: 0px;
+    background-color: @ui_button_color;
+    color: @ui_text_color;
+}
+
+combobox > window {
+    border: none;
+    box-shadow: none;
+    background-color: @ui_window_background_soft;
+    border-radius: 10px;
+}
+
+combobox button:last-child {
+    border-radius: 0px 20px 20px 0px;
+}
+
+combobox button:first-child, combobox entry {
+    background-color: @ui_button_color;
+    /*border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;*/
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+combobox :first-child entry {
+    border-radius: 20px 0px 0px 20px;
+}
+
+combobox menu {
+    border-color: red;
+    /* border-radius: 0px; */
+    color: @ui_text_color;
+    background-color: transparent;
+}
+
+/**************
+ *   Switch   *
+ **************/
+switch {
+    background-color: @ui_button_pressed_color;
+}
+
+switch slider {
+    background-color: @ui_button_color;
+}
+
+switch:hover slider {
+    background-color: @ui_button_hover_color;
+}
+
+/* switch:disabled slider {
+  background-color: #FAFAFA;
+} */
+
+/* switch:checked:disabled slider {
+  animation: none;
+} */
+
+.VerticalBox {
+    background-color: @ui_window_background_soft;
+    border-color: @ui_button_hover_color;
+    /* border-style: solid; */
+    border-radius: 20px;
+    /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19); */
+    /* margin: 5px; */
+}
+
+#RightBox {
+    margin-top: 5px;
+    /* margin-bottom: 5px;
+    border-right-width: 2px;
+    border-left-width: 2px; */
+    border-style: solid;
+    border-color: @ui_box_border_color;
+}
+
+#LeftBox {
+    margin-top: 5px;
+    /* margin-bottom: 5px;
+    border-right-width: 2px;
+    border-left-width: 2px; */
+    border-style: solid;
+    border-color: @ui_box_border_color;
+}
+
+#MainBox {
+    /* border-top-width: 2px;
+    border-bottom-width: 2px; */
+    border-style: solid;
+    border-color: @ui_box_border_color;
+    margin: 0px;
+}
+
+.tb-bordered-box {
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-style: solid;
+    border-color: @ui_box_border_color;
+}
+
+.edge-bordered-box {
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-style: solid;
+    border-color: @ui_box_border_color;
+}
+
+.bordered-box {
+    padding: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: @ui_box_border_color;
+}
+
+.description {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.text {
+    color: @ui_text_color;
+}
+
+.border-top-radius-10 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.border-bottom-radius-10 {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.border-radius-10 {
+    border-radius: 10px;
+}
+
+.border-left-radius-20 {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.window-background-soft {
+    background-color: @ui_window_background_soft;
+}
+
+.window-background {
+    background-color: @ui_window_background;
+}
+
+.nobackground {
+    background: none;
+}
+
+.padding-5 {
+    padding: 5px;
+}
+
+.padding-20 {
+    padding: 20px;
+}
+
+.margin-5 {
+    margin: 5px;
+}
+
+.margin-20 {
+    margin: 20px;
+}
+
+.margin-10 {
+    margin: 10px;
+}
+
+/* .margin-right-5 {
+    margin-left: 10px;
+} */
+
+.margin-top-5 {
+    margin-top: 5px;
+}
+
+.margin-bottom-5 {
+    margin-bottom: 5px;
+}
+
+.border-radius-20 {
+    border-radius: 20px;
+}
+
+.shadowedbutton, .shadowedbox {
+    box-shadow: 0 2px 4px 0 @ui_shadow_color, 0 3px 10px 0 @ui_shadow_color;
+}
+
+.shadowed {
+    box-shadow: 0 2px 4px 0 @ui_shadow_color, 0 3px 10px 0 @ui_shadow_color;
+}
+
+.nonshadowed {
+    box-shadow: none;
+}
+
+.appwindow {
+    background-color: @ui_window_background;
+    box-shadow: none;
+}
