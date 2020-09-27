@@ -1,5 +1,5 @@
 #include <callback/callbacks.hh>
-#include <data/global_data.hh>
+#include <data_structure/global_data.hh>
 #include <gtk.hh>
 #include <gtkmm.h>
 

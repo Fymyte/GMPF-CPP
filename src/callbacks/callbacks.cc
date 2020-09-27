@@ -2,7 +2,7 @@
 // Created by Pierrick on 24/09/2020.
 //
 
-#include <data/global_data.hh>
+#include <data_structure/global_data.hh>
 #include <gtkmm.h>
 
 void quitMenuItemActivate_cb() { GMPF::GlobalData::getApp()->quit(); }

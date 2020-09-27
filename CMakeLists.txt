@@ -4,8 +4,6 @@ project(GMPF VERSION "")
 # Set the minimum version of cmake required to build this project
 cmake_minimum_required(VERSION 3.16)
 
-set_property(GLOBAL PROPERTY CXX_STANDARD 20)
-
 # Use the package PkgConfig to detect GTK+ headers/library files
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK3 REQUIRED gtkmm-3.0 gmodule-2.0)
@@ -21,9 +19,11 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 # Add an executable compiled from sources
 include_directories(includes)
 add_executable(gmpf "")
+set_property(TARGET gmpf PROPERTY CXX_STANDARD 20)
 
 # Tests targets
 add_executable(unitTest "")
+set_property(TARGET unitTest PROPERTY CXX_STANDARD 20)
 
 # Include CMake from subdirectories which may define sources for targets
 include(test/CMakeLists.txt)

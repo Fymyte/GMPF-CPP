@@ -5,4 +5,4 @@ target_sources(gmpf
         )
 
 include(${CMAKE_CURRENT_LIST_DIR}/callbacks/CMakeLists.txt)
-include(${CMAKE_CURRENT_LIST_DIR}/data/CMakeLists.txt)
+include(${CMAKE_CURRENT_LIST_DIR}/data_structure/CMakeLists.txt)
