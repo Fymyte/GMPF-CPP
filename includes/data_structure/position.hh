@@ -12,7 +12,7 @@ namespace GMPF {
     Position();
     Position(int64 x, int64 y);
 
-    Position operator=(const Position& other) const;
+    Position& operator=(const Position& other);
 
     Position& add(const Position& other);
     Position& sub(const Position& other);

@@ -50,7 +50,7 @@ include(FetchContent)
 FetchContent_Declare(
         googletest
         GIT_REPOSITORY https://github.com/google/googletest.git
-        GIT_TAG        release-1.8.0
+        GIT_TAG        release-1.10.0
 )
 
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
@@ -59,6 +59,8 @@ set(BUILD_GTEST ON CACHE BOOL "" FORCE)
 
 FetchContent_MakeAvailable(googletest)
 
+enable_testing()
+
 # Now simply link against gtest or gtest_main
 target_link_libraries(unitTest gtest_main)
-add_test(NAME position COMMAND unitTest)
+add_test(NAME UnitTests COMMAND unitTest)
