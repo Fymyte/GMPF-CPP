@@ -59,6 +59,8 @@ set(BUILD_GTEST ON CACHE BOOL "" FORCE)
 
 FetchContent_MakeAvailable(googletest)
 
+enable_testing()
+
 # Now simply link against gtest or gtest_main
 target_link_libraries(unitTest gtest_main)
-add_test(NAME position COMMAND unitTest)
+add_test(NAME UnitTests COMMAND unitTest)
