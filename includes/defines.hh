@@ -15,6 +15,7 @@ typedef uint32_t      Uint32;
 typedef int64_t       int64; // long long = 8 bytes = 64 bits
 typedef uint64_t      Uint64;
 
-constexpr auto INTERFACE_NAME = "interface.glade";
 
+// TODO: move these values to a config file
+constexpr auto INTERFACE_NAME = "interface.glade";
 constexpr auto STYLE = "themes/main.css";
