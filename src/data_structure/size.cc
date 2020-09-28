@@ -11,5 +11,8 @@ namespace GMPF {
   Size::Size(int64 width, int64 height)
     : width(width)
     , height(height) {}
+
+  int64 Size::getWidth() const { return width; }
+  int64 Size::getHeight() const { return height; }
 }
 
