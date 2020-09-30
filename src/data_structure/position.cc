@@ -12,6 +12,7 @@ namespace GMPF {
   Position::Position(int64 x, int64 y)
   : x(x)
   , y(y) {}
+  Position::~Position() = default;
 
   Position& Position::operator=(const Position& other) = default;
   Position& Position::add(const Position& other) {

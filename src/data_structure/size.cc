@@ -11,6 +11,7 @@ namespace GMPF {
   Size::Size(int64 width, int64 height)
     : width(width)
     , height(height) {}
+  Size::~Size() = default;
 
   Size& Size::operator=(const Size& other) = default;
 

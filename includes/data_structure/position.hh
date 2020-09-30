@@ -11,6 +11,7 @@ namespace GMPF {
   public:
     Position();
     Position(int64 x, int64 y);
+    virtual ~Position();
 
     Position& operator=(const Position& other);
 
