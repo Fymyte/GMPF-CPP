@@ -11,6 +11,7 @@ namespace GMPF {
   public:
     Size();
     Size(int64 width, int64 height);
+    virtual ~Size();
 
     Size& operator=(const Size& other);
 
