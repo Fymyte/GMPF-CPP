@@ -23,12 +23,12 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 ################################
 # Boost lib
 ################################
-# Find boost for logging
-find_package(Boost REQUIRED)
-# Setup CMake to use Boost, tell the compiler where to look for headers
-# and to the linker where to look for libraries
-include_directories(${Boost_INCLUDE_DIRS})
-link_directories(${Boost_LIBRARY_DIRS})
+## Find boost for logging
+#find_package(Boost REQUIRED)
+## Setup CMake to use Boost, tell the compiler where to look for headers
+## and to the linker where to look for libraries
+#include_directories(${Boost_INCLUDE_DIRS})
+#link_directories(${Boost_LIBRARY_DIRS})
 
 ################################
 # JSON Parser
