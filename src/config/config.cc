@@ -24,7 +24,7 @@ namespace GMPF {
     // Open the file
     std::ifstream file("config.json");
     if (!file) {
-//      log::warn("unable to open config file. Loading default config");
+      log::warn("unable to open config file. Loading default config");
       return Config();
     }
 

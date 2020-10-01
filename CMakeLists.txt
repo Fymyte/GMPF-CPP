@@ -21,16 +21,6 @@ link_directories(${GTK3_LIBRARY_DIRS})
 add_definitions(${GTK3_CFLAGS_OTHER})
 
 ################################
-# Boost lib
-################################
-## Find boost for logging
-#find_package(Boost REQUIRED)
-## Setup CMake to use Boost, tell the compiler where to look for headers
-## and to the linker where to look for libraries
-#include_directories(${Boost_INCLUDE_DIRS})
-#link_directories(${Boost_LIBRARY_DIRS})
-
-################################
 # JSON Parser
 ################################
 include(FetchContent)
@@ -70,7 +60,7 @@ configure_file(resources/images/GMPF.png ${CMAKE_BINARY_DIR}/images/GMPF.png COP
 configure_file(resources/themes/main.css ${CMAKE_BINARY_DIR}/themes/main.css COPYONLY)
 
 # Link the target to libraries
-target_link_libraries(gmpf ${GTK3_LIBRARIES} ${GTK3_LDFLAGS} nlohmann_json::nlohmann_json ${Boost_LIBRARIES})
+target_link_libraries(gmpf ${GTK3_LIBRARIES} ${GTK3_LDFLAGS} nlohmann_json::nlohmann_json)
 
 ################################
 # GTest
