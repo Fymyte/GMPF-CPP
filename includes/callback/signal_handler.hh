@@ -7,5 +7,5 @@
 #include <gtkmm.h>
 
 namespace GMPF {
-  void connectSignals(Glib::RefPtr<Gtk::Builder> builder);
+  void connectSignals(const Glib::RefPtr<Gtk::Builder>& builder);
 }  // namespace GMPF

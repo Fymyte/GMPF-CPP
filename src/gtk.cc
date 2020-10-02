@@ -34,13 +34,14 @@ namespace GMPF {
     connectSignals(builder);
 
     // Set accepted events for drawingArea
-    GET_UI(Gtk::Widget, drawingArea, drawingArea);
+    auto drawingArea = getUiElement<Gtk::Widget>("drawingArea");
     Gdk::EventMask mask = Gdk::EventMask::BUTTON_PRESS_MASK | Gdk::EventMask::POINTER_MOTION_MASK |
                           Gdk::EventMask::BUTTON_RELEASE_MASK | Gdk::EventMask::ENTER_NOTIFY_MASK |
                           Gdk::EventMask::LEAVE_NOTIFY_MASK;
     drawingArea->set_events(drawingArea->get_events() | mask);
 
-    GET_UI(Gtk::Window, mainWindow, MainWindow);
+    // Set theme from css
+    auto mainWindow = getUiElement<Gtk::Window>("MainWindow");
     Glib::RefPtr<Gdk::Screen> screen = mainWindow->get_screen();
     Glib::RefPtr<Gtk::CssProvider> provider = Gtk::CssProvider::create();
     provider->load_from_file(Gio::File::create_for_path(config.getTheme()));
