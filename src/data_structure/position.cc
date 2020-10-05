@@ -2,8 +2,8 @@
 // Created by Pierrick Guillaume on 27/09/2020.
 //
 
-#include <defines.hh>
 #include <data_structure/position.hh>
+#include <misc/type.hh>
 
 namespace GMPF {
   Position::Position()

@@ -1,6 +1,12 @@
-#include <data_structure/global_data.hh>
+//
+// Created by Pierrick on 22/09/2020.
+//
+
+
 #include <gtk.hh>
 #include <gtkmm.h>
+
+#include <data_structure/global_data.hh>
 
 int main(int argc, char* argv[]) {
 

@@ -2,8 +2,9 @@
 // Created by Pierrick Guillaume on 24/09/2020.
 //
 
-#include <data_structure/global_data.hh>
 #include <gtkmm.h>
+
+#include <data_structure/global_data.hh>
 
 namespace GMPF {
   namespace {

@@ -2,14 +2,12 @@
 // Created by Pierrick on 30/09/2020.
 //
 
-// STL includes
 #include <fstream>
-// Lib includes
+
 #include <nlohmann/json.hpp>
-// Project includes
+
 #include <config/config.hh>
 #include <config/logger.hh>
-#include <exceptions/parsing_exception.hh>
 
 namespace GMPF {
   Config::Config()

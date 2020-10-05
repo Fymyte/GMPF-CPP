@@ -1,12 +1,17 @@
-#include <callback/signal_handler.hh>
-#include <data_structure/global_data.hh>
-#include <config/config.hh>
-#include <defines.hh>
+//
+// Created by Pierrick on 22/09/2020.
+//
+
+#include <optional>
+#include <iostream>
+
 #include <gtk.hh>
 #include <gtkmm.h>
-#include <iostream>
-#include <macro.hh>
-#include <optional>
+
+#include <callback/signal_handler.hh>
+#include <config/config.hh>
+#include <data_structure/global_data.hh>
+#include <misc/utils.hh>
 
 namespace GMPF {
   std::optional<Gtk::Window*> start() {
@@ -55,5 +60,9 @@ namespace GMPF {
     gdkWindow->set_event_compression(false);
 
     return mainWindow;
+  }
+
+  void quit() {
+    GlobalData::getApp()->quit();
   }
 }  // namespace GMPF

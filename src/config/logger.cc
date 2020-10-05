@@ -3,6 +3,7 @@
 //
 
 #include <config/logger.hh>
+
 #include <iostream>
 
 constexpr auto RESET = "\033[0m";

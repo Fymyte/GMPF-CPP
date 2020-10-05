@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include <defines.hh>
+#include <misc/type.hh>
 
 namespace GMPF {
   class Position {
