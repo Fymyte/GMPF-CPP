@@ -35,7 +35,6 @@ namespace GMPF {
       ERROR
     };
     logLevel logLevel_;
-    bool isFile;
     std::ofstream fileStream_;
     std::ostream& ostream_;
   };
