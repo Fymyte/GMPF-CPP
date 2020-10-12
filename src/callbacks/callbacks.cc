@@ -4,7 +4,7 @@
 
 #include <gtkmm.h>
 
-#include <gtk.hh>
+#include <gmpf.hh>
 
 void quitMenuItemActivate_cb() { GMPF::quit(); }
 bool quitMainWindow_cb(GdkEventAny*) {

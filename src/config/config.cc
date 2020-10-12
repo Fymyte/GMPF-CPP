@@ -7,7 +7,7 @@
 #include <nlohmann/json.hpp>
 
 #include <config/config.hh>
-#include <config/logger.hh>
+#include <misc/logger.hh>
 
 namespace GMPF {
   Config::Config()
@@ -22,7 +22,7 @@ namespace GMPF {
     // Open the file
     std::ifstream file("config.json");
     if (!file) {
-      log::warn("unable to open config file. Loading default config");
+      Logger::warn() << "unable to open config file. Loading default config" << "\n";
       return Config();
     }
 
@@ -30,7 +30,18 @@ namespace GMPF {
     nlohmann::json jsonConfig;
     file >> jsonConfig;
 
-    return { jsonConfig["theme"], jsonConfig["interface"] };
+    std::string theme;
+    if (jsonConfig.find("theme") != jsonConfig.end()) theme = jsonConfig["theme"];
+    else theme = "themes/main.css";
+
+    std::string interface;
+    if (jsonConfig.find("interface") != jsonConfig.end()) theme = jsonConfig["interface"];
+    else interface = "interface.glade";
+
+    if (jsonConfig.find("log-file") != jsonConfig.end())
+      Logger::setOutputStream(std::make_shared<std::ofstream>(std::ofstream(jsonConfig["interface"])));
+
+    return { theme, interface };
   }
 
   const std::string& Config::getTheme() const { return theme; }
