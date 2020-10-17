@@ -41,9 +41,7 @@ set(Boost_LIBS Boost::system Boost::program_options)
 # Print debug info only if compilation is in debug
 # Add an executable compiled from sources
 include_directories(includes)
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_DEBUG 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++2a")
 # Main gmpf target
 add_executable(gmpf "")
 # Tests targets
