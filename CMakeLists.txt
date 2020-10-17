@@ -38,14 +38,14 @@ set(Boost_LIBS Boost::system Boost::program_options)
 ################################
 # Setup project
 ################################
-# Print debug info only if compilation is in debug
 # Add an executable compiled from sources
 include_directories(includes)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++2a")
 # Main gmpf target
 add_executable(gmpf "")
+set_property(TARGET gmpf PROPERTY CXX_STANDARD 20)
 # Tests targets
 add_executable(unitTest "")
+set_property(TARGET unitTest PROPERTY CXX_STANDARD 20)
 
 # Include CMakeLists from subdirectories which may define sources for targets
 add_subdirectory(src)
