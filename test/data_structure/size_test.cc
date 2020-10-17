@@ -86,11 +86,4 @@ TEST_F(SizeTest, Comparison_is_correct) {
   ASSERT_TRUE(size1 == GMPF::Size(1, 2));
 }
 
-TEST_F(SizeTest, Set_is_correct) {
-  size1.setHeight(12);
-  size2.setWidth(14);
-  ASSERT_EQ(size1.getHeight(), 12);
-  ASSERT_EQ(size2.getWidth(), 14);
-}
-
 #pragma clang diagnostic pop

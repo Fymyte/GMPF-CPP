@@ -6,7 +6,7 @@
 
 #include <gmpf.hh>
 
-void quitMenuItemActivate_cb() { GMPF::quit(); }
+void quitMenuItem_cb() { GMPF::quit(); }
 bool quitMainWindow_cb(GdkEventAny*) {
   GMPF::quit();
   return false;

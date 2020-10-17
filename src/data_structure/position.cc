@@ -13,8 +13,6 @@ namespace GMPF {
   : x(x)
   , y(y) {}
   Position::~Position() = default;
-
-  Position& Position::operator=(const Position& other) = default;
   Position& Position::add(const Position& other) {
     x += other.x;
     y += other.y;

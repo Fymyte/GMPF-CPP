@@ -6,5 +6,12 @@
 
 #include <gtkmm.h>
 
-void quitMenuItemActivate_cb();
+/**
+ * @brief Called when the quit button from file menu is activated.
+ */
+void quitMenuItem_cb();
+/**
+ * @brief Called when the cross button from the main window is activated.
+ * @return false (constrains by signature of Gtk event callbacks)
+ */
 bool quitMainWindow_cb(GdkEventAny*);

@@ -31,9 +31,12 @@
 *.out
 *.app
 
-# Build directorie
+# Build directories
 build
 cmake-build-*
+
+# Documentation
+docs
 
 # IDE files
 .idea

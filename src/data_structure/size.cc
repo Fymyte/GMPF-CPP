@@ -13,8 +13,6 @@ namespace GMPF {
     , height(height) {}
   Size::~Size() = default;
 
-  Size& Size::operator=(const Size& other) = default;
-
   Size& Size::add(const Size& other) {
     width += other.width;
     height += other.height;
@@ -44,8 +42,5 @@ namespace GMPF {
 
   int64 Size::getWidth() const { return width; }
   int64 Size::getHeight() const { return height; }
-
-  void Size::setWidth(int64 width) { this->width = width; }
-  void Size::setHeight(int64 height) { this->height = height; }
 }
 

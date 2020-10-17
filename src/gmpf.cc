@@ -2,23 +2,21 @@
 // Created by Pierrick on 22/09/2020.
 //
 
-#include <optional>
 #include <iostream>
+#include <optional>
 
 #include <gmpf.hh>
 #include <gtkmm.h>
 
 #include <callback/signal_handler.hh>
-#include <config/config.hh>
 #include <data_structure/global_data.hh>
 #include <misc/utils.hh>
 
 namespace GMPF {
-  std::optional<Gtk::Window*> start() {
+  std::optional<Gtk::Window*> configure(const std::string& themeFile,
+                                        const std::string& interface) {
 
-    auto config = Config::parseConfig();
-
-    gchar* filename = g_build_filename(config.getInterface().c_str(), nullptr);
+    gchar* filename = g_build_filename(interface.c_str(), nullptr);
     Glib::RefPtr<Gtk::Builder> builder = Gtk::Builder::create();
     try {
       builder->add_from_file(filename);
@@ -40,8 +38,10 @@ namespace GMPF {
 
     // Set accepted events for drawingArea
     auto drawingArea = getUiElement<Gtk::Widget>("drawingArea");
-    Gdk::EventMask mask = Gdk::EventMask::BUTTON_PRESS_MASK | Gdk::EventMask::POINTER_MOTION_MASK |
-                          Gdk::EventMask::BUTTON_RELEASE_MASK | Gdk::EventMask::ENTER_NOTIFY_MASK |
+    Gdk::EventMask mask = Gdk::EventMask::BUTTON_PRESS_MASK |
+                          Gdk::EventMask::POINTER_MOTION_MASK |
+                          Gdk::EventMask::BUTTON_RELEASE_MASK |
+                          Gdk::EventMask::ENTER_NOTIFY_MASK |
                           Gdk::EventMask::LEAVE_NOTIFY_MASK;
     drawingArea->set_events(drawingArea->get_events() | mask);
 
@@ -49,8 +49,9 @@ namespace GMPF {
     auto mainWindow = getUiElement<Gtk::Window>("MainWindow");
     Glib::RefPtr<Gdk::Screen> screen = mainWindow->get_screen();
     Glib::RefPtr<Gtk::CssProvider> provider = Gtk::CssProvider::create();
-    provider->load_from_file(Gio::File::create_for_path(config.getTheme()));
-    Gtk::StyleContext::add_provider_for_screen(screen, provider, GTK_STYLE_PROVIDER_PRIORITY_USER);
+    provider->load_from_file(Gio::File::create_for_path(themeFile));
+    Gtk::StyleContext::add_provider_for_screen(
+        screen, provider, GTK_STYLE_PROVIDER_PRIORITY_USER);
 
     // Display all widget
     mainWindow->show_all();

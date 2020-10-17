@@ -33,7 +33,7 @@ BreakBeforeBinaryOperators: None
 BreakBeforeTernaryOperators: true
 BreakConstructorInitializers: BeforeComma
 BreakInheritanceList: BeforeComma
-ColumnLimit: 120
+ColumnLimit: 80
 CompactNamespaces: false
 ContinuationIndentWidth: 4
 IndentCaseLabels: false
@@ -65,3 +65,9 @@ SpacesInParentheses: false
 SpacesInSquareBrackets: false
 TabWidth: 2
 UseTab: Never
+
+Language: Cpp
+DerivePointerAlignment: false
+IncludeBlocks: Regroup
+DeriveLineEnding: false
+
