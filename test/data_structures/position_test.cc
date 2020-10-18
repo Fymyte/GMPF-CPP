@@ -4,7 +4,7 @@
 // Created by Pierrick on 25/09/2020.
 //
 
-#include "data_structure/position.hh"
+#include "data_structures/position.hh"
 
 #include <gtest/gtest.h>
 

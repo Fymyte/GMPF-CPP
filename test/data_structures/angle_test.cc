@@ -4,7 +4,7 @@
 // Created by Pierrick on 29/09/2020.
 //
 
-#include "data_structure/angle.hh"
+#include "data_structures/angle.hh"
 
 #include <gtest/gtest.h>
 

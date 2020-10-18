@@ -2,12 +2,12 @@
 // Created by Pierrick on 07/10/2020.
 //
 
+#include "misc/logger.hh"
+
 #include <string>
 #include <fstream>
 
 #include <gtest/gtest.h>
-
-#include <misc/logger.hh>
 
 class LoggerTest: public ::testing::Test {
 public:
