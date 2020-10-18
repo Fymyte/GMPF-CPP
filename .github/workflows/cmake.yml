@@ -35,12 +35,14 @@ jobs:
           echo 'Retoring cache'
           tree ~/libs/
           sudo cp --force --recursive ~/libs/* /
+          tree /
         else
           sudo apt update && sudo apt install libgtkmm-3.0-dev libboost-program-options-dev libboost-system-dev
           mkdir -p ~/libs
           for dep in "libgtkmm-3.0-dev libboost-program-options-dev libboost-system-dev"; do
             dpkg -L $dep | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/libs/
           done
+        tree /
         fi
 
     - name: Create Build Environment
