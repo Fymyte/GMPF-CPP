@@ -34,7 +34,7 @@ jobs:
         else
           sudo apt update && sudo apt install libgtkmm-3.0-dev libboost-program-options1.71-dev libboost-system1.71-dev
           mkdir -p ~/libs
-          for dep in "libgtkmm-3.0-dev libboost-program-options-dev libboost-system-dev"; do
+          for dep in "libgtkmm-3.0-dev libboost-program-options1.71-dev libboost-system1.71-dev"; do
             dpkg -L $dep | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/libs/
           done
         fi
