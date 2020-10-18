@@ -2,32 +2,31 @@
 // Created by Pierrick Guillaume on 27/09/2020.
 //
 
-#include <data_structure/position.hh>
-#include <misc/type.hh>
+#include "data_structure/position.hh"
 
 namespace GMPF {
   Position::Position()
-  : x(0)
-  , y(0) {}
+  : x_(0)
+  , y_(0) {}
   Position::Position(int64 x, int64 y)
-  : x(x)
-  , y(y) {}
+  : x_(x)
+  , y_(y) {}
   Position::~Position() = default;
   Position& Position::add(const Position& other) {
-    x += other.x;
-    y += other.y;
+    x_ += other.x_;
+    y_ += other.y_;
     return *this;
   }
   Position& Position::sub(const Position& other) {
-    x -= other.x;
-    y -= other.y;
+    x_ -= other.x_;
+    y_ -= other.y_;
     return *this;
   }
   Position Position::operator+(const Position& other) const {
-    return {x + other.x, y + other.y};
+    return {x_ + other.x_, y_ + other.y_};
   }
   Position Position::operator-(const Position& other) const {
-    return {x - other.x, y - other.y};
+    return {x_ - other.x_, y_ - other.y_};
   }
   Position& Position::operator+=(const Position& other) {
     return this->add(other);
@@ -37,14 +36,14 @@ namespace GMPF {
   }
 
   bool Position::operator==(const Position& other) const {
-    return x == other.x && y == other.y;
+    return x_ == other.x_ && y_ == other.y_;
   }
   bool Position::operator!=(const Position& other) const {
     return !(*this == other);
   }
 
-  Position Position::operator-() const { return {-x, -y}; }
+  Position Position::operator-() const { return {-x_, -y_}; }
 
-  int64 Position::getX() const { return x; }
-  int64 Position::getY() const { return y; }
+  int64 Position::getX() const { return x_; }
+  int64 Position::getY() const { return y_; }
 }

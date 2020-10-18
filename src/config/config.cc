@@ -8,8 +8,8 @@
 
 #include <boost/program_options.hpp>
 
-#include <config/config.hh>
-#include <misc/logger.hh>
+#include "config/config.hh"
+#include "misc/logger.hh"
 
 namespace po = boost::program_options;
 namespace GMPF {

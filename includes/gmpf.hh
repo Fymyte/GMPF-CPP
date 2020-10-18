@@ -6,7 +6,7 @@
 
 #include <optional>
 
-#include <gtkmm.h>
+#include <gtkmm/window.h>
 
 namespace GMPF {
   /**

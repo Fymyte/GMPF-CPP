@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <misc/type.hh>
+#include "misc/type.hh"
 
 namespace GMPF {
   /**
@@ -116,7 +116,7 @@ namespace GMPF {
     /// @}
 
   private:
-    int64 width;
-    int64 height;
+    int64 width_;
+    int64 height_;
   };
 }

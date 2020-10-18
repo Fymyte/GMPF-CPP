@@ -2,15 +2,21 @@
 // Created by Pierrick on 22/09/2020.
 //
 
+#include "gmpf.hh"
+
 #include <iostream>
 #include <optional>
 
-#include <gmpf.hh>
-#include <gtkmm.h>
+#include <gtkmm/builder.h>
+#include <gtkmm/widget.h>
+#include <gtkmm/cssprovider.h>
+#include <gdkmm/event.h>
+#include <gdkmm/screen.h>
+#include <giomm.h>
 
-#include <callback/signal_handler.hh>
-#include <data_structure/global_data.hh>
-#include <misc/utils.hh>
+#include "callback/signal_handler.hh"
+#include "data_structure/global_data.hh"
+#include "misc/utils.hh"
 
 namespace GMPF {
   std::optional<Gtk::Window*> configure(const std::string& themeFile,

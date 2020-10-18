@@ -4,8 +4,9 @@
 // Created by Pierrick on 29/09/2020.
 //
 
-#include "gtest/gtest.h"
-#include <data_structure/size.hh>
+#include "data_structure/size.hh"
+
+#include <gtest/gtest.h>
 
 class SizeTest : public ::testing::Test {
 protected:

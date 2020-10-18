@@ -4,8 +4,9 @@
 // Created by Pierrick on 25/09/2020.
 //
 
-#include "gtest/gtest.h"
-#include <data_structure/position.hh>
+#include "data_structure/position.hh"
+
+#include <gtest/gtest.h>
 
 class PositionTest : public ::testing::Test {
 protected:

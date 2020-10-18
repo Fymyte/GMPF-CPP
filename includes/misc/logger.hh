@@ -7,10 +7,11 @@
 #pragma once
 
 #include <fstream>
-#include <misc/singleton.hh>
 #include <optional>
 #include <ostream>
 #include <variant>
+
+#include "misc/singleton.hh"
 
 /**
  * @def D_PRINT()
@@ -89,8 +90,8 @@ namespace GMPF {
     Logger();
     enum logLevel { DEBUG, INFO, WARN, ERROR };
     logLevel logLevel_;
-    std::ofstream fileStream_;
     std::ostream& ostream_;
+    std::ofstream fileStream_;
   };
 
 }  // namespace GMPF

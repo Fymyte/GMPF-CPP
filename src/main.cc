@@ -6,10 +6,10 @@
 
 #include <gtkmm.h>
 
-#include <config/config.hh>
-#include <data_structure/global_data.hh>
-#include <gmpf.hh>
-#include <misc/logger.hh>
+#include "config/config.hh"
+#include "data_structure/global_data.hh"
+#include "gmpf.hh"
+#include "misc/logger.hh"
 
 int main(int argc, char* argv[]) {
   auto config = GMPF::Config::parseConfig(argc, argv);

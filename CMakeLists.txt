@@ -57,6 +57,9 @@ configure_file(resources/images/GMPF.png ${CMAKE_BINARY_DIR}/images/GMPF.png COP
 configure_file(resources/themes/main.css ${CMAKE_BINARY_DIR}/themes/main.css COPYONLY)
 configure_file(resources/gmpf.conf ${CMAKE_BINARY_DIR}/gmpf.conf COPYONLY)
 
+# Add additionnal warning and error flags
+set(COMPILATION_FLAGS "-Wall -Wextra -pedantic")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMPILATION_FLAGS}")
 # Define macro for project information
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DPROJECT_VERSION='\"${CMAKE_PROJECT_VERSION}\"'")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DPROJECT_NAME='\"${CMAKE_PROJECT_NAME}\"'")

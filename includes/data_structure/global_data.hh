@@ -6,9 +6,10 @@
 
 #pragma once
 
-#include <gtkmm.h>
+#include <gtkmm/builder.h>
+#include <gtkmm/application.h>
 
-#include <misc/singleton.hh>
+#include "misc/singleton.hh"
 
 namespace GMPF {
   /**
@@ -17,8 +18,8 @@ namespace GMPF {
    */
   struct GlobalData: public Singleton<GlobalData> {
   private:
-    Glib::RefPtr<Gtk::Builder> builder;
-    Glib::RefPtr<Gtk::Application> app;
+    Glib::RefPtr<Gtk::Builder> builder_;
+    Glib::RefPtr<Gtk::Application> app_;
 
   public:
     /// @name Getters.

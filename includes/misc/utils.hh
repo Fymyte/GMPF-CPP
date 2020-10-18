@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <data_structure/global_data.hh>
+#include "data_structure/global_data.hh"
 
 namespace GMPF {
   /**

@@ -2,8 +2,12 @@
 // Created by Pierrick on 24/09/2020.
 //
 
-#include <callback/callbacks.hh>
-#include <gtkmm.h>
+#include "callback/signal_handler.hh"
+
+#include <gtkmm/widget.h>
+#include <gtkmm/menuitem.h>
+
+#include "callback/callbacks.hh"
 
 #define CONNECT_SIGNAL(_type, _name, _signal, _function, _builder)             \
   _type* _name;                                                                \

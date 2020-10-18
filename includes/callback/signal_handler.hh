@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include <gtkmm.h>
+#include <gtkmm/builder.h>
 
 namespace GMPF {
   /**

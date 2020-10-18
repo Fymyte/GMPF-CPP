@@ -4,8 +4,7 @@
 
 #pragma once
 
-#include <gtkmm.h>
-
+#include <gdkmm/event.h>
 /**
  * @brief Called when the quit button from file menu is activated.
  */

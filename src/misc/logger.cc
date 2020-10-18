@@ -3,7 +3,8 @@
 //
 
 #include <iostream>
-#include <misc/logger.hh>
+
+#include "misc/logger.hh"
 
 constexpr auto reset = "\033[0m";
 constexpr auto boldRed = "\033[1m\033[31m";
