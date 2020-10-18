@@ -30,7 +30,7 @@ jobs:
       run: |
         if [[ "$CACHE_HIT" == 'true' ]]; then
           echo 'Retoring cache'
-          tree ~/libs
+          ls ~/libs
           sudo cp --force --recursive ~/libs/* /
         else
           sudo apt update && sudo apt install libgtkmm-3.0-dev libboost-program-options-dev libboost-system-dev
