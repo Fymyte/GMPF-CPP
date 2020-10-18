@@ -22,7 +22,7 @@ jobs:
       id: cache-libs
       with:
         path: ~/libs
-        key: 'libs-dependencies'
+        key: ${{secrets.LIBS_VERSIONS}}
 
     - name: Install dependancies
       env:
