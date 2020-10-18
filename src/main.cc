@@ -7,7 +7,7 @@
 #include <gtkmm.h>
 
 #include "config/config.hh"
-#include "data_structure/global_data.hh"
+#include "data_structures/global_data.hh"
 #include "gmpf.hh"
 #include "misc/logger.hh"
 

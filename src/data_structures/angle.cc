@@ -4,7 +4,7 @@
 /// @date 18/10/2020.
 ///
 
-#include "data_structure/angle.hh"
+#include "data_structures/angle.hh"
 
 namespace GMPF {
   Angle::Angle(Uint16 angle): angle_(angle) {}

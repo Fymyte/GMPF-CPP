@@ -2,7 +2,7 @@
 // Created by Pierrick on 28/09/2020.
 //
 
-#include "data_structure/size.hh"
+#include "data_structures/size.hh"
 
 namespace GMPF {
   Size::Size()

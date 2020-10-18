@@ -9,7 +9,7 @@
 #include <string>
 
 #include "misc/singleton.hh"
-#include "data_structure/size.hh"
+#include "data_structures/size.hh"
 
 namespace GMPF {
   /**
@@ -50,7 +50,7 @@ namespace GMPF {
     /// @}
 
   private:
-    std::string filename;
-    Size size;
+    std::string filename_;
+    Size size_;
   };
 }  // namespace GMPF

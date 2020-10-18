@@ -10,13 +10,13 @@
 
 #include <gtkmm/flowbox.h>
 
-#include "data_structure/layer.hh"
+#include "data_structures/layer.hh"
 
 namespace GMPF {
   class LayerManager {
   public:
   private:
-    std::vector<Layer> layers;
-    Gtk::FlowBox* UIElement;
+    std::vector<Layer> layers_;
+    Gtk::FlowBox* UIElement_;
   };
 }

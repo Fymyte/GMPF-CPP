@@ -13,9 +13,9 @@
 #include <gtkmm/flowboxchild.h>
 #include <cairomm/context.h>
 
-#include "data_structure/size.hh"
-#include "data_structure/position.hh"
-#include "data_structure/angle.hh"
+#include "data_structures/size.hh"
+#include "data_structures/position.hh"
+#include "data_structures/angle.hh"
 
 namespace GMPF {
   class Layer {
@@ -24,19 +24,19 @@ namespace GMPF {
     bool saveToFile(const std::string& filename);
 
   private:
-    Glib::ustring name;
+    Glib::ustring name_;
 
-    Position position;
-    Size size;
-    Angle rotationAngle;
-    bool visible;
+    Position position_;
+    Size size_;
+    Angle rotationAngle_;
+    bool visible_;
 
-    Gdk::Pixbuf* image;
+    Gdk::Pixbuf* image_;
 
-    Cairo::Surface* surface;
-    Cairo::Context* cr;
+    Cairo::Surface* surface_;
+    Cairo::Context* cr_;
 
-    Gtk::Grid* UIIcon;
-    Gtk::FlowBoxChild* UIElement;
+    Gtk::Grid* UIIcon_;
+    Gtk::FlowBoxChild* UIElement_;
   };
 }  // namespace GMPF

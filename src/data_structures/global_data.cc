@@ -2,7 +2,7 @@
 // Created by Pierrick Guillaume on 24/09/2020.
 //
 
-#include "data_structure/global_data.hh"
+#include "data_structures/global_data.hh"
 
 namespace GMPF {
   const Glib::RefPtr<Gtk::Builder> GlobalData::getBuilder() {

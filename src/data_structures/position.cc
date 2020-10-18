@@ -2,7 +2,7 @@
 // Created by Pierrick Guillaume on 27/09/2020.
 //
 
-#include "data_structure/position.hh"
+#include "data_structures/position.hh"
 
 namespace GMPF {
   Position::Position()
