@@ -9,6 +9,7 @@
 #include "misc/singleton.hh"
 #include "misc/type.hh"
 #include "data_structures/position.hh"
+#include "data_structures/tools/tool.hh"
 
 namespace GMPF {
   class ToolBox: Singleton<ToolBox> {

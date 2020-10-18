@@ -6,11 +6,10 @@
 
 #pragma once
 
-#include <vector>
+#include "data_structures/layers/layer.hh"
 
 #include <gtkmm/flowbox.h>
-
-#include "data_structures/layer.hh"
+#include <vector>
 
 namespace GMPF {
   class LayerManager {
