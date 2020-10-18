@@ -13,5 +13,5 @@ target_sources(unitTest
         ${CMAKE_CURRENT_LIST_DIR}/angle.cc
         )
 
-include(${CMAKE_CURRENT_LIST_DIR}/layers/CmakeLists.txt)
-include(${CMAKE_CURRENT_LIST_DIR}/tools/CmakeLists.txt)
+include(${CMAKE_CURRENT_LIST_DIR}/layers/CMakeLists.txt)
+include(${CMAKE_CURRENT_LIST_DIR}/tools/CMakeLists.txt)
