@@ -12,7 +12,7 @@ constexpr auto boldMagenta = "\033[1m\033[35m";
 constexpr auto boldWhite = "\033[1m\033[37m";
 
 namespace GMPF {
-  Logger::Logger()
+  Logger::Logger(SingletonToken)
       : logLevel_(Logger::INFO)
       , ostream_(std::clog)
       , fileStream_() {}

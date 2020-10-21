@@ -24,6 +24,15 @@ namespace GMPF {
   class ToolBox: Singleton<ToolBox> {
   public:
     /**
+     * @brief Singleton constructor.
+     *
+     * Cannot be called since we need an instance of
+     * `Singleton<ToolBox>::SingletonToken`.
+     * This constructor is used by the \b Singleton to instantiate the unique
+     * Logger.
+     */
+    explicit ToolBox(SingletonToken);
+    /**
      * @brief Register a \b Tool and make it available to usage using the
      * provided name.
      *
@@ -46,8 +55,7 @@ namespace GMPF {
     static void use();
 
   private:
-    friend ToolBox& Singleton<ToolBox>::instance();
-    ToolBox();
+//    friend ToolBox& Singleton<ToolBox>::instance();
 
     std::unordered_map<std::string, Tool::AbstractTool*> availableTools_;
     Tool::AbstractTool* selectedTool_;

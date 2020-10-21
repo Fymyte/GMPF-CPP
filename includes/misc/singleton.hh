@@ -24,10 +24,11 @@ public:
    * @return The unique instance of the implementing class
    */
   static T& instance() {
-    static T instance_;
+    static T instance_{ SingletonToken{} };
     return instance_;
   }
 
 protected:
+  struct SingletonToken {};
   Singleton() = default;
 };

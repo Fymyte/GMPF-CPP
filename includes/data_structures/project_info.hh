@@ -21,6 +21,15 @@ namespace GMPF {
    */
   class ProjectInfo final: private Singleton<ProjectInfo> {
   public:
+    /**
+     * @brief Singleton constructor.
+     *
+     * Cannot be called since we need an instance of
+     * `Singleton<ProjectInfo>::SingletonToken`.
+     * This constructor is used by the \b Singleton to instantiate the unique
+     * Logger.
+     */
+    explicit ProjectInfo(SingletonToken);
     /// @name Getters.
     /// @{
     /**

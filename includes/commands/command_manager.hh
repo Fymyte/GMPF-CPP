@@ -18,6 +18,15 @@ namespace GMPF {
   class CommandManager: Singleton<CommandManager> {
   public:
     /**
+     * @brief Singleton constructor.
+     *
+     * Cannot be called since we need an instance of
+     * `Singleton<CommandManager>::SingletonToken`.
+     * This constructor is used by the \b Singleton to instantiate the unique
+     * Logger.
+     */
+    explicit CommandManager(SingletonToken);
+    /**
      * @brief Add \a command to the undo stack.
      * @param command the \b Command to add to undo stack.
      */

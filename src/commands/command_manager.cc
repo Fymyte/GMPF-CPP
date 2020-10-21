@@ -7,6 +7,8 @@
 #include "commands/command_manager.hh"
 
 namespace GMPF {
+  CommandManager::CommandManager(SingletonToken) {}
+
   void CommandManager::add(Command* command) {
     instance().undoCommands.push(command);
   }

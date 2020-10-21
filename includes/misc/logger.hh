@@ -45,6 +45,15 @@ namespace GMPF {
   public:
     /// @name Ctor.
     /// @{
+    /**
+     * @brief Singleton constructor.
+     *
+     * Cannot be called since we need an instance of
+     * `Singleton<Logger>::SingletonToken`.
+     * This constructor is used by the \b Singleton to instantiate the unique
+     * Logger.
+     */
+    explicit Logger(SingletonToken);
     Logger& operator=(const Logger&) = delete;
     Logger(const Logger&) = delete;
     /// @}
@@ -86,8 +95,6 @@ namespace GMPF {
                                     const std::string& msg);
 
   private:
-    friend Logger& Singleton<Logger>::instance();
-    Logger();
     enum logLevel { DEBUG, INFO, WARN, ERROR };
     logLevel logLevel_;
     std::ostream& ostream_;

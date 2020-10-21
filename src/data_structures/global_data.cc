@@ -5,6 +5,8 @@
 #include "data_structures/global_data.hh"
 
 namespace GMPF {
+  GlobalData::GlobalData(SingletonToken) {}
+
   const Glib::RefPtr<Gtk::Builder> GlobalData::getBuilder() {
     return instance().builder_;
   }

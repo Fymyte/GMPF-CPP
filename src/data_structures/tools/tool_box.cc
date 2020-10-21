@@ -9,7 +9,7 @@
 #include "misc/logger.hh"
 
 namespace GMPF {
-  ToolBox::ToolBox()
+  ToolBox::ToolBox(SingletonToken)
       : availableTools_(std::unordered_map<std::string, Tool::AbstractTool*>())
       , selectedTool_(nullptr) {}
 

@@ -22,6 +22,15 @@ namespace GMPF {
     Glib::RefPtr<Gtk::Application> app_;
 
   public:
+    /**
+     * @brief Singleton constructor.
+     *
+     * Cannot be called since we need an instance of
+     * `Singleton<GlobalData>::SingletonToken`.
+     * This constructor is used by the \b Singleton to instantiate the unique
+     * Logger.
+     */
+    explicit GlobalData(SingletonToken);
     /// @name Getters.
     /// @{
     /** Retrieve the \a builder from the unique instance of \a data */
