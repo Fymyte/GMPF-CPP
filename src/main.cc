@@ -2,6 +2,8 @@
 // Created by Pierrick on 22/09/2020.
 //
 
+#include <sstream>
+
 #include <optional>
 
 #include <gtkmm.h>
@@ -10,6 +12,9 @@
 #include "data_structures/global_data.hh"
 #include "gmpf.hh"
 #include "misc/logger.hh"
+
+#include "data_structures/tools/tool_box.hh"
+#include "data_structures/tools/painter.hh"
 
 int main(int argc, char* argv[]) {
   auto config = GMPF::Config::parseConfig(argc, argv);

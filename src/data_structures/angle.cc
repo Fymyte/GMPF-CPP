@@ -7,6 +7,7 @@
 #include "data_structures/angle.hh"
 
 namespace GMPF {
+  Angle::Angle(): angle_(0) {}
   Angle::Angle(Uint16 angle): angle_(angle) {}
   Angle::~Angle() = default;
 

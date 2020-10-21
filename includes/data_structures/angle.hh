@@ -24,6 +24,10 @@ namespace GMPF {
     /// @name Ctor / Dtor.
     /// @{
     /**
+     * @brief Create an instance of \b Angle with angle set to 0.
+     */
+    Angle();
+    /**
      * @brief Create an instance of \b Angle with angle set to given one.
      * @param angle The angle to set.
      */

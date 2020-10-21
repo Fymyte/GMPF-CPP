@@ -27,7 +27,7 @@ namespace GMPF {
     if (manager.redoCommands.empty())
       return false;
 
-    manager.redoCommands.top()->undo();
+    manager.redoCommands.top()->redo();
     manager.undoCommands.push(manager.redoCommands.top());
     manager.redoCommands.pop();
     return true;

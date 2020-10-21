@@ -36,7 +36,8 @@ build
 cmake-build-*
 
 # Documentation
-docs
+docs/html
+docs/latex
 
 # IDE files
 .idea

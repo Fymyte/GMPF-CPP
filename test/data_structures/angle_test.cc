@@ -14,6 +14,12 @@ protected:
   GMPF::Angle angle2 = GMPF::Angle(10);
 };
 
+TEST_F(AngleTest, Create_with_default_contructor) {
+  GMPF::Angle angle = GMPF::Angle();
+
+  ASSERT_EQ(angle.getAngle(), 0);
+}
+
 TEST_F(AngleTest, Create_with_good_arguments) {
   GMPF::Angle angle = GMPF::Angle(128);
 
